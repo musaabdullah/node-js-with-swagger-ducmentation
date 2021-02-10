@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    background: gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.posts .post-items {
+    padding: 10px;
+}
+
+table, td, tr{
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+ 
