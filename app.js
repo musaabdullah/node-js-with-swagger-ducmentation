@@ -55,24 +55,82 @@ app.get('/posts', async (req, res) => {
  *     summary: insert new post
  *     description: insert new post
  *     requestBody:
- *      content:
- *      application/json:
- *      schema:
- *        properties:
- *         title:
- *          type: string
- *          description: post title
- *         body:
- *          type: string
- *          description: body of the post
- *        responses:
- *         201:
- *          description: post has been inserted
- *         422:
- *          description: post already exists
+ *       content:
+ *         application/json:
+ *          schema:
+ *           properties:
+ *             title:
+ *               type: string
+ *               description: post title
+ *             body:
+ *               type: string
+ *               description: body of the post
+ *       responses:
+ *           201:
+ *            description: post has been inserted
+ *           422:
+ *            description: post already exists
  *
  */
 app.post('/posts', async (req, res) => {
+  try {
+    const post = { title, body } = req.body;
+    res.status(201).json({ post })
+  } catch(error ) {
+    res.status(400).json(error);
+  }
+})
+
+/**
+ * @swagger 
+ * /posts:
+ *   put: 
+ *     summary: insert new post
+ *     description: insert new post
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *          schema:
+ *           properties:
+ *             title:
+ *               type: string
+ *               description: post title
+ *             body:
+ *               type: string
+ *               description: body of the post
+ *       responses:
+ *           201:
+ *            description: post has been inserted
+ *           422:
+ *            description: post already exists
+ *
+ */
+app.put('/posts', async (req, res) => {
+  try {
+    const post = { title, body } = req.body;
+    res.status(201).json({ post })
+  } catch(error ) {
+    res.status(400).json(error);
+  }
+})
+
+/**
+ * @swagger 
+ * /posts:
+ *   delete: 
+ *     summary: insert new post
+ *     description: insert new post
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *         responses:
+ *           201:
+ *            description: post has been inserted
+ *           422:
+ *            description: post already exists
+ *
+ */
+app.delete('/posts', async (req, res) => {
   try {
     const post = { title, body } = req.body;
     res.status(201).json({ post })
