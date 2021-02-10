@@ -85,8 +85,7 @@ app.post('/posts', async (req, res) => {
  * @swagger 
  * /posts:
  *   put: 
- *     summary: insert new post
- *     description: insert new post
+ *     description: put post
  *     requestBody:
  *       content:
  *         application/json:
@@ -118,8 +117,8 @@ app.put('/posts', async (req, res) => {
  * @swagger 
  * /posts:
  *   delete: 
- *     summary: insert new post
- *     description: insert new post
+ *
+ *     description: delete
  *     requestBody:
  *       content:
  *         application/json:
